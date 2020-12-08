@@ -1,0 +1,34 @@
+﻿<Window x:Class="KShop.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KShop"
+        mc:Ignorable="d"
+        Title="Admin" Height="1080" Width="1920">
+    <Grid Background="#0E0E0E">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="605*"/>
+            <ColumnDefinition Width="327*"/>
+            <ColumnDefinition Width="327*"/>
+            <ColumnDefinition Width="653*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="89*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Name="UserGrid" Grid.Column="0" Grid.ColumnSpan="2"></DataGrid>
+        <DataGrid Name="OrderGrid" Grid.Column="2" Grid.ColumnSpan="2"></DataGrid>
+        <DataGrid Name="LaptopGrid" Grid.Row="1"></DataGrid>
+        <DataGrid Name="ComputerGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></DataGrid>
+        <DataGrid Name="PhoneGrid" Grid.Row="1" Grid.Column="3"></DataGrid>
+
+        <Button Name="AddItem" Content="Добавление" Grid.Column="1" HorizontalAlignment="Left" Margin="174,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="300" Height="68"
+                FontSize="28" Grid.ColumnSpan="2" Click="AddItem_OnClick"/>
+
+        <Button Name="DeleteItem" Content="Удалить" Grid.Column="0" HorizontalAlignment="Left" Margin="174,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="300" Height="68"
+                FontSize="28" Click="DeleteItem_OnClick"/>
+    </Grid>
+</Window>
